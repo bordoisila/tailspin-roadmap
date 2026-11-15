@@ -1,0 +1,51 @@
+<!doctype html>
+<!--
+  TailSpin VR - COMING SOON billboard (the board right of the mirror in the lobby).
+
+  How the game reads this page:
+    <h1>          the board's heading
+    <article>     one billboard item, shown one at a time (about 7 seconds each), in this order
+      <img src>   its picture (optional; jpg or png, about 16:9, under 1 MB; relative paths are next to this page)
+      <h2>        its title (keep it short: 2-4 words)
+      <p>         one line of text (up to about 60 characters)
+  Everything else (this comment, the styles) is only for previewing the page in a browser.
+
+  Edit this file and add pictures to images/, commit and push: GitHub Pages republishes in a minute or two and the
+  game picks it up the next time a player loads the lobby. No build needed.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TailSpin Coming Soon</title>
+  <style>
+    :root { --gold: #ffd23f; --ink: #0b1030; --panel: #121a44; --text: #e6ecff; }
+    body { margin: 0; background: var(--ink); color: var(--text); font-family: "Fredoka", system-ui, sans-serif; }
+    h1 { text-align: center; color: var(--gold); letter-spacing: 0.08em; margin: 24px 16px; }
+    main { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; padding: 0 16px 24px; }
+    article { background: var(--panel); border: 3px solid var(--gold); border-radius: 18px; overflow: hidden; }
+    article img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #1d2766; }
+    h2 { color: var(--gold); margin: 12px 14px 4px; font-size: 1.2rem; }
+    p { margin: 0 14px 14px; }
+  </style>
+</head>
+<body>
+  <h1>COMING SOON</h1>
+  <main>
+    <article>
+      <img src="images/space.jpg" alt="Space arena">
+      <h2>SPACE</h2>
+      <p>Race round the planets in a brand new arena.</p>
+    </article>
+    <article>
+      <img src="images/pirate.jpg" alt="Pirate captain character">
+      <h2>PIRATE CAPTAIN</h2>
+      <p>A new character, parrot not included. Yet.</p>
+    </article>
+    <article>
+      <h2>NEW EVERY WEEK</h2>
+      <p>New vehicles and characters every week.</p>
+    </article>
+  </main>
+</body>
+</html>
